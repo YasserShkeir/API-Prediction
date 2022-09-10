@@ -135,3 +135,18 @@ html {
 .input-section-input button:focus {
   background-color: #f082ac;
 }
+
+/* Results Styling */
+#Results {
+  text-align: left;
+  margin: 10px 5px;
+  width: 40%;
+  color: #ea4c89;
+  border: 1px solid #ea4c89;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  height: fit-content;
+  line-height: 20px;
+  padding: 10px 16px;
+}
