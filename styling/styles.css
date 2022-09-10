@@ -59,3 +59,79 @@ html {
 .center {
   justify-content: center;
 }
+
+/* ************ */
+/* Div Styling */
+/* ************ */
+
+/* Image Styling */
+
+#Image-Section {
+  height: 30vh;
+  margin: 20px 0px 20px 0px;
+}
+
+#Image {
+  height: 30vh;
+  border: 5px solid #ea4c89;
+  border-radius: 20px;
+}
+
+/* Input Styling */
+
+#input-section {
+  width: 80vw;
+}
+
+/* Label Styling */
+
+.input-section-label {
+  font-size: 3vh;
+  margin: 10px;
+  font-family: sans-serif;
+  color: #ea4c89;
+}
+
+.input-section-input {
+  width: 60%;
+  margin: 10px;
+}
+
+.input-section-input input {
+  margin: 10px 5px;
+  width: 60%;
+  color: #ea4c89;
+  border: 1px solid #ea4c89;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  min-height: 40px;
+  height: 2vh;
+  line-height: 20px;
+  padding: 10px 16px;
+}
+
+/* Button Styling */
+
+.input-section-input button {
+  background-color: #ea4c89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  transition: color 100ms;
+  vertical-align: baseline;
+  touch-action: manipulation;
+}
+
+.input-section-input button:hover,
+.input-section-input button:focus {
+  background-color: #f082ac;
+}
