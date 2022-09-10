@@ -25,11 +25,6 @@ ul {
   font-weight: normal;
 }
 
-ol,
-ul {
-  list-style: none;
-}
-
 img {
   max-width: 100%;
   height: auto;
@@ -43,6 +38,7 @@ html {
   background-image: url("../images/22.jpg");
   background-color: #cccccc;
   background-size: cover;
+  font-family: sans-serif;
 }
 
 .flex {
@@ -88,7 +84,6 @@ html {
 .input-section-label {
   font-size: 3vh;
   margin: 10px;
-  font-family: sans-serif;
   color: #ea4c89;
 }
 
@@ -100,18 +95,21 @@ html {
   padding: 10px;
 }
 
-.input-section-input input {
-  margin: 5px 5px;
-  width: 60%;
+.box-design {
   color: #ea4c89;
   border: 1px solid #ea4c89;
   border-radius: 8px;
   box-sizing: border-box;
   background-color: #ffffff;
+  padding: 10px 16px;
+  line-height: 20px;
+}
+
+.input-section-input input {
+  margin: 5px 5px;
+  width: 60%;
   min-height: 40px;
   height: 2vh;
-  line-height: 20px;
-  padding: 10px 16px;
 }
 
 /* Button Styling */
@@ -144,14 +142,8 @@ html {
   text-align: left;
   margin: 10px 5px;
   width: 40%;
-  color: #ea4c89;
-  border: 1px solid #ea4c89;
-  border-radius: 8px;
-  box-sizing: border-box;
-  background-color: #ffffff;
   height: fit-content;
   line-height: 20px;
-  padding: 10px 16px;
 }
 
 @media only screen and (max-width: 600px) {
