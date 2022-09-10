@@ -76,7 +76,7 @@ html {
 /* Input Styling */
 
 #input-section {
-  width: 80vw;
+  width: 85vw;
 }
 
 /* Label Styling */
@@ -88,7 +88,7 @@ html {
 }
 
 .input-section-input {
-  width: 60%;
+  width: 70%;
   margin: 10px;
   border: 4px solid white;
   border-radius: 20px;
@@ -151,6 +151,10 @@ html {
     max-width: 100%;
   }
 
+  #input {
+    font-size: 4vw;
+  }
+
   #input-section {
     width: 100%;
   }
@@ -161,5 +165,18 @@ html {
 
   .input-section-input {
     width: 80%;
+  }
+
+  .input-section-input input {
+    width: 80%;
+  }
+
+  .input-section-input button {
+    font-size: 4vw;
+  }
+
+  #Results {
+    width: 70%;
+    font-size: 4vw;
   }
 }
