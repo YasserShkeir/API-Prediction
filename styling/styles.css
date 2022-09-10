@@ -95,10 +95,13 @@ html {
 .input-section-input {
   width: 60%;
   margin: 10px;
+  border: 4px solid white;
+  border-radius: 20px;
+  padding: 10px;
 }
 
 .input-section-input input {
-  margin: 10px 5px;
+  margin: 5px 5px;
   width: 60%;
   color: #ea4c89;
   border: 1px solid #ea4c89;
@@ -149,4 +152,22 @@ html {
   height: fit-content;
   line-height: 20px;
   padding: 10px 16px;
+}
+
+@media only screen and (max-width: 600px) {
+  #Image-Section {
+    max-width: 100%;
+  }
+
+  #input-section {
+    width: 100%;
+  }
+
+  .input-section-label {
+    font-size: 5vw;
+  }
+
+  .input-section-input {
+    width: 80%;
+  }
 }
