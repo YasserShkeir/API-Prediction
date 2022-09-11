@@ -1,10 +1,13 @@
 // Used to fetch the url of a dog image
-fetch("https://dog.ceo/api/breeds/image/random")
-  .then((response) => response.json())
-  .then((data) => {
-    var source = data.message;
+axios.get("https://dog.ceo/api/breeds/image/random").then(
+  (response) => {
+    var source = response.data.message;
     document.getElementById("Image").src = source;
-  });
+  },
+  (error) => {
+    console.log(error);
+  }
+);
 
 // This function is called when the user clicks on the input section button
 // It uses fetch from 3 APIs
@@ -23,26 +26,32 @@ function nameInput() {
     var gen_gender;
     var gen_proba;
     // Call fetch, and store the values of gender and proba
-    fetch("https://api.genderize.io/?name=" + name)
-      .then((response) => response.json())
-      .then((data) => {
-        gen_gender = data.gender;
-        gen_proba = data.probability;
+    axios.get("https://api.genderize.io/?name=" + name).then(
+      (response) => {
+        gen_gender = response.data.gender;
+        gen_proba = response.data.probability;
         document.getElementById(
           "Gender"
         ).innerHTML = `Chance of being ${gen_gender} is ${gen_proba * 100}%`;
-      });
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
 
     // **** START AGIFY SECTION ****
     // Create vars agi_age to store the age
     var agi_age;
     // Call fetch and store the value of age
-    fetch("https://api.agify.io/?name=" + name)
-      .then((response) => response.json())
-      .then((data) => {
-        agi_age = data.age;
+    axios.get("https://api.agify.io/?name=" + name).then(
+      (response) => {
+        agi_age = response.data.age;
         document.getElementById("Age").innerHTML = `Age is ${agi_age}`;
-      });
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
 
     // **** START NATIONALIZE SECTION ****
     // Create cty_country to store the countries dictionary
@@ -50,10 +59,10 @@ function nameInput() {
     // Create two arrays to store country IDs and the proba for each (Easier to loop through next)
     var arr_ids = [];
     var arr_proba = [];
-    fetch("https://api.nationalize.io/?name=" + name)
-      .then((response) => response.json())
-      .then((data) => {
-        cty_country = data.country;
+
+    axios.get("https://api.nationalize.io/?name=" + name).then(
+      (response) => {
+        cty_country = response.data.country;
         var nationality = "";
         cty_country.forEach((element, index) => {
           arr_ids.push(element.country_id);
@@ -67,7 +76,11 @@ function nameInput() {
             "%<br/>";
         });
         document.getElementById("Nationality").innerHTML = nationality;
-      });
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   } else {
     // If the input is invalid, change message to waiting, empty all result divs, and alert user
     document.getElementById("Message").innerHTML = "Waiting for input...";
