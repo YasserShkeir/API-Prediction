@@ -114,7 +114,7 @@ html {
 
 /* Button Styling */
 
-.input-section-input button {
+button {
   background-color: #ea4c89;
   border-radius: 8px;
   border-style: none;
@@ -144,6 +144,17 @@ html {
   width: 40%;
   height: fit-content;
   line-height: 20px;
+}
+
+/* Bored Styling */
+#Bored {
+  width: 40%;
+  max-width: fit-content;
+}
+
+#Bored-Msg {
+  margin: 10px;
+  text-align: left;
 }
 
 @media only screen and (max-width: 600px) {
@@ -178,5 +189,10 @@ html {
   #Results {
     width: 70%;
     font-size: 4vw;
+  }
+
+  #Bored {
+    min-width: 60%;
+    width: fit-content;
   }
 }
