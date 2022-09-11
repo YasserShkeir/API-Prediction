@@ -8,8 +8,6 @@ axios.get("https://dog.ceo/api/breeds/image/random").then(
     console.log(error);
   }
 );
-<<<<<<< HEAD
-=======
 
 axios.get("https://api.ipify.org/?format=json").then(
   (response) => {
@@ -20,7 +18,6 @@ axios.get("https://api.ipify.org/?format=json").then(
     console.log(error);
   }
 );
->>>>>>> development
 
 // This function is called when the user clicks on the input section button
 // It uses fetch from 3 APIs
