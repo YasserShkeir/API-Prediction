@@ -8,6 +8,19 @@ axios.get("https://dog.ceo/api/breeds/image/random").then(
     console.log(error);
   }
 );
+<<<<<<< HEAD
+=======
+
+axios.get("https://api.ipify.org/?format=json").then(
+  (response) => {
+    var ip = response.data.ip;
+    document.getElementById("ip").textContent = `Your IP address is: ${ip}`;
+  },
+  (error) => {
+    console.log(error);
+  }
+);
+>>>>>>> development
 
 // This function is called when the user clicks on the input section button
 // It uses fetch from 3 APIs
@@ -89,4 +102,33 @@ function nameInput() {
     document.getElementById("Nationality").innerHTML = "";
     alert("WOOF WOOF!\nPlease input a valid name");
   }
+}
+
+function bored() {
+  var msg = (document.getElementById("Bored-Msg").innerHTML =
+    "Well then do the following:<br/><br/>");
+  axios.get("https://www.boredapi.com/api/activity").then(
+    (response) => {
+      var suggestion = response.data.activity;
+      var type = response.data.type;
+      var participants = response.data.participants;
+      var price = response.data.price;
+      var cost = price;
+      if (cost == 0) {
+        cost = "nothing";
+      }
+
+      var link = response.data.link;
+      var final = "";
+      if (link) {
+        final = "<br/><br/>Here's a link to help you out:<br/>" + link;
+      }
+
+      msg += `${suggestion}, it's a ${type} activity that needs ${participants} participants and costs ${cost} ${final}`;
+      document.getElementById("Bored-Msg").innerHTML = msg;
+    },
+    (error) => {
+      console.log(error);
+    }
+  );
 }
