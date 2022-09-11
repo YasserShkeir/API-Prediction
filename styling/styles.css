@@ -157,6 +157,13 @@ button {
   text-align: left;
 }
 
+#ip {
+  background-color: white;
+  color: #ea4c89;
+  padding: 10px;
+  border-radius: 20px;
+}
+
 @media only screen and (max-width: 600px) {
   #Image-Section {
     max-width: 100%;

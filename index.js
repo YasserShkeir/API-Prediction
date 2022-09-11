@@ -9,6 +9,16 @@ axios.get("https://dog.ceo/api/breeds/image/random").then(
   }
 );
 
+axios.get("https://api.ipify.org/?format=json").then(
+  (response) => {
+    var ip = response.data.ip;
+    document.getElementById("ip").textContent = `Your IP address is: ${ip}`;
+  },
+  (error) => {
+    console.log(error);
+  }
+);
+
 // This function is called when the user clicks on the input section button
 // It uses fetch from 3 APIs
 function nameInput() {
