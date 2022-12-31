@@ -1,3 +1,3 @@
-# API-Prediction
+# Nationality Prediction from Name
 
-Make sure to check out the Figma Representation too!
+Visit https://yassershkeir.github.io/API-Prediction/ and input your name!
